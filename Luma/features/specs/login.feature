@@ -5,7 +5,6 @@ Funcionalidade: Efetuar o Login
 
     Como usuário do site Luma
     Quero realizar o login com a minha conta
-    Para efetuar uma compra
 
     Cenario: Realizacao de Login com Sucesso
         Dado que eu entre na pagina e clique para logar
