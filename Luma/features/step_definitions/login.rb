@@ -1,19 +1,18 @@
 
+login = LoginPage.new
+
 Dado('que eu entre na pagina e clique para logar') do
-  visit('https://magento.nublue.co.uk/')
-  click_link('Sign In')
+    login.Acessar
 end
   
 Dado('insiro meu email {string} e senha {string}') do |email, senha|
-    fill_in('login[username]', with: email)
-    fill_in('login[password]', with: senha)
+    login.PreencherLogin(email,senha)
 end
   
 Quando('eu clicar no botao entrar') do
-    find('button[name="send"]').click    
-    sleep(6)
+    login.Entrar
 end
   
 Entao('irei visualizar bem vindo Veronica Costello') do
-    page.has_css?('.logged-in')
+    login.ValidarAcesso
 end
