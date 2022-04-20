@@ -3,11 +3,11 @@ class Carrinho
 
     def SelecionarCamisetasMasculinas
         find_by_id('ui-id-4').hover
-        sleep(2)
+        sleep(3)
         find_by_id('ui-id-16').hover
         sleep(3)
         find_by_id('ui-id-18').hover.click
-        sleep(13)
+        sleep(4)
     end 
 
     def SelecionarJaqueta(jaquetaNome)
@@ -21,8 +21,8 @@ class Carrinho
     end
 
     def ValidarMensagem
-        sleep(3)
-        assert_text('You added Kenobi Trail Jacket to your')
+        sleep(5)
+        assert_text('You added')
     end
 
 end
