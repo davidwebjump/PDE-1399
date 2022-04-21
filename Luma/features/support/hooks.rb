@@ -17,12 +17,13 @@ end
 at_exit do
 ReportBuilder.configure do |config|
     config.json_path = 'Data/Reports/report.json'
-    config.report_path = 'Data/Reports/'
+    config.report_path = 'Data/Reports/TesteLuma'
     config.report_types = [:html]
-    config.report_title = 'My Test Results'
+    config.report_title = 'Meus Testes'
     config.include_images = true
     config.compress_images = false
-    config.additional_info = {browser: 'Chrome', environment: 'Stage 5'}
+    config.color = 'indigo'
+    config.additional_info = {browser: 'Chrome', environment: 'Luma Test', QA: 'David Allan', Projeto: 'Luma'}
   end
 ReportBuilder.build_report
 end
